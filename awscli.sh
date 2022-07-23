@@ -128,12 +128,3 @@ aws ec2 create-key-pair --key-name $PUBLIC_KP --query 'KeyMaterial' --output tex
 #creating ec2 in public-subnet
 INSTANCE_ID_1=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type t2.micro --key-name $PUBLIC_KP --security-group-ids $SG_ID --subnet-id $SUBNET_PUBLIC_ID --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyPublicInstance}]' --output text --region $AWS_REGION)
 echo "INSTANCE ID 1 '$INSTANCE_ID_1' CREATED
-
-sleep 1m
-
-echo "thank you, now check your IP"
-
-# connecting public instance
-#sudo ssh -i "$PUBLIC_KP.pem" ubuntu@$PB_IP
-
-
