@@ -20,8 +20,8 @@ jobs:
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id:  AKIATJLUJTDL6T3PKDUN 
-        aws-secret-access-key: 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 
+        aws-access-key-id:  ${{ secrets.ACCESS_KEY_ID }} 
+        aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }} 
         aws-region: us-east-1
         
     - name: runs script for creating aws infrastructure
