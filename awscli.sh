@@ -2,7 +2,7 @@
 
 
 AWS_REGION="us-east-1"
-VPC_NAME="My VPC"
+VPC_NAME="My VPC 2"
 VPC_CIDR="10.0.0.0/16"
 SUBNET_PUBLIC_CIDR="10.0.1.0/24"
 SUBNET_PUBLIC_AZ="us-east-1a"
@@ -10,8 +10,8 @@ SUBNET_PUBLIC_NAME="public-subnet"
 SUBNET_PRIVATE_CIDR="10.0.2.0/24"
 SUBNET_PRIVATE_AZ="us-east-1b"
 SUBNET_PRIVATE_NAME="private-subnet"
-PUBLIC_KP="pubkey2"
-PRIVATE_KP="prikey2"
+PUBLIC_KP="pubkey3"
+PRIVATE_KP="prikey3"
 AMI_ID="ami-052efd3df9dad4825"
 
 
@@ -117,7 +117,7 @@ aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port
 aws ec2 create-key-pair --key-name $PRIVATE_KP --query 'KeyMaterial' --output text > $PRIVATE_KP.pem
 
 #creating ec2 in private-subnet
-INSTANCE_ID_2=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type t2.micro --key-name $PRIVATE_KP --security-group-ids $SG_ID --subnet-id $SUBNET_PRIVATE_ID --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyPrivateInstance}]' --region $AWS_REGION)
+INSTANCE_ID_2=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type t2.micro --key-name $PRIVATE_KP --security-group-ids $SG_ID --subnet-id $SUBNET_PRIVATE_ID --region $AWS_REGION)
 echo "INSTANCE ID 2 '$INSTANCE_ID_2' CREATED"
 
 sleep 1m
@@ -126,5 +126,5 @@ sleep 1m
 aws ec2 create-key-pair --key-name $PUBLIC_KP --query 'KeyMaterial' --output text > $PUBLIC_KP.pem
 
 #creating ec2 in public-subnet
-INSTANCE_ID_1=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type t2.micro --key-name $PUBLIC_KP --security-group-ids $SG_ID --subnet-id $SUBNET_PUBLIC_ID --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyPublicInstance}]' --output text --region $AWS_REGION)
-echo "INSTANCE ID 1 '$INSTANCE_ID_1' CREATED
+INSTANCE_ID_1=$(aws ec2 run-instances --image-id $AMI_ID --count 1 --instance-type t2.micro --key-name $PUBLIC_KP --security-group-ids $SG_ID --subnet-id $SUBNET_PUBLIC_ID --output text --region $AWS_REGION)
+echo "INSTANCE ID 1 '$INSTANCE_ID_1' CREATED"
