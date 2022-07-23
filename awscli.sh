@@ -2,7 +2,7 @@
 
 
 AWS_REGION="us-east-1"
-VPC_NAME="My VPC 2"
+VPC_NAME="My VPC"
 VPC_CIDR="10.0.0.0/16"
 SUBNET_PUBLIC_CIDR="10.0.1.0/24"
 SUBNET_PUBLIC_AZ="us-east-1a"
@@ -10,8 +10,8 @@ SUBNET_PUBLIC_NAME="public-subnet"
 SUBNET_PRIVATE_CIDR="10.0.2.0/24"
 SUBNET_PRIVATE_AZ="us-east-1b"
 SUBNET_PRIVATE_NAME="private-subnet"
-PUBLIC_KP="pubkey3"
-PRIVATE_KP="prikey3"
+PUBLIC_KP="pubkey4"
+PRIVATE_KP="prikey4"
 AMI_ID="ami-052efd3df9dad4825"
 
 
