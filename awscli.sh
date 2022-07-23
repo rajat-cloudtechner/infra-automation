@@ -10,11 +10,11 @@ SUBNET_PUBLIC_NAME="public-subnet"
 SUBNET_PRIVATE_CIDR="10.0.2.0/24"
 SUBNET_PRIVATE_AZ="us-east-1b"
 SUBNET_PRIVATE_NAME="private-subnet"
-PUBLIC_KP="pubkey"
-PRIVATE_KP="prikey"
+PUBLIC_KP="pubkey2"
+PRIVATE_KP="prikey2"
 AMI_ID="ami-052efd3df9dad4825"
 
-aws configure
+
 
 # Create VPC
 echo "Creating VPC in preferred region..."
