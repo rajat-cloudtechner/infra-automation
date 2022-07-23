@@ -17,8 +17,12 @@ jobs:
     - name: change permission of file
       run: chmod +x awscli.sh
       
-    - name: aws configure
-      run: aws configure
-      
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id:  AKIATJLUJTDL6T3PKDUN 
+        aws-secret-access-key: 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 
+        aws-region: us-east-1
+        
     - name: runs script for creating aws infrastructure
       run : ./awscli.sh
