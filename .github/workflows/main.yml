@@ -17,5 +17,8 @@ jobs:
     - name: change permission of file
       run: chmod +x awscli.sh
       
+    - name: aws configure
+      run: aws configure
+      
     - name: runs script for creating aws infrastructure
       run : ./awscli.sh
