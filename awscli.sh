@@ -14,7 +14,7 @@ PUBLIC_KP="test-java"
 PRIVATE_KP="test-java"
 AMI_ID="ami-052efd3df9dad4825"
 
-
+aws ec2 import-key-pair --key-name "test-java" --public-key-material fileb://testjava.pub
 
 # Create VPC
 echo "Creating VPC in preferred region..."
