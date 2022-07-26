@@ -10,11 +10,11 @@ SUBNET_PUBLIC_NAME="public-subnet"
 SUBNET_PRIVATE_CIDR="10.0.2.0/24"
 SUBNET_PRIVATE_AZ="us-east-1b"
 SUBNET_PRIVATE_NAME="private-subnet"
-PUBLIC_KP="test-java"
-PRIVATE_KP="test-java"
+PUBLIC_KP="testjava"
+PRIVATE_KP="testjava"
 AMI_ID="ami-052efd3df9dad4825"
 
-aws ec2 import-key-pair --key-name "test-java" --public-key-material fileb://testjava.pub
+aws ec2 import-key-pair --key-name "testjava" --public-key-material fileb://testjava.pub
 
 # Create VPC
 echo "Creating VPC in preferred region..."
