@@ -26,4 +26,3 @@ jobs:
         
     - name: runs script for creating aws infrastructure
       run : ./awscli.sh
-
