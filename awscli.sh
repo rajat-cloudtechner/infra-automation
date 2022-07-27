@@ -12,7 +12,7 @@ SUBNET_PRIVATE_AZ="us-east-1b"
 SUBNET_PRIVATE_NAME="private-subnet"
 PUBLIC_KP="testmvn"
 PRIVATE_KP="testmvn"
-AMI_ID="ami-052efd3df9dad4825"
+AMI_ID="ami-0cff7528ff583bf9a"
 
 #aws ec2 import-key-pair --key-name "testjava" --public-key-material fileb://testjava.pub
 
