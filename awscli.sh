@@ -107,7 +107,7 @@ SG_ID=$(aws ec2 create-security-group --group-name MySecurityGroup --description
 echo "SG ID '$SG_ID' CREATED in '$AWS_REGION'."
 
 #authorize security-group
-aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr 202.89.73.81/32
+aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr 0.0.0.0/0
 
 aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 80 --cidr 0.0.0.0/0
 
